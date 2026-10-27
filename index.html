@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joerang Kopi</title>
+    <link rel="stylesheet" href="UTS_PemogramanWeb.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Joerang Kopi</h1>
+            <p class="slogan"> Brewed to Inspire</p>
+            <div class="Student-card">
+                <p><strong>Nama Mahasiswa : </strong> Bunga Febriani Putri</p>
+                <p><strong>NPM : </strong> 251121005 | <strong>Kelas: </strong> Sistem Informasi RegB1</p>
+                <p class="Course-info"> UTS Pemograman Berbasis Web - Dosen: Rikky Wisnu Nugraha, S.T., M.Kom</p>
+            </div>
+            <button id="Theme-toggle" class="tbn-theme">Mode Gelap</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#katalog">Katalog Visual</a></li>
+                <li><a href="#menu-section">Daftar Menu</a></li>
+                <li><a href="#order-section">Simulasi Pesanan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="about" class="card">
+            <h2>Tentang Joerang Kopi</h2>
+            <div class="about-flex">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSupdk6QfMzPav7ZEKq-u0muNp3wFiBujiXVEAvxDrNqYWWIXqo-gURmws&s=10" alt="Suasana Kedai Joerang Kopi" class="profile-img" width="260" height="180" style="width: 260px; max-width: 100%; height: 180px; object-fit: cover;">
+                <img src="suasana1.jpeg" alt="Suasana1" class="profile-img" width="260" height="180" style="width: 260px; max-width: 100%; height: 180px; object-fit: cover;">
+                <img src="suasana2.jpeg" alt="Suasana2" class="profile-img" width="260" height="180" style="width: 260px; max-width: 100%; height: 180px; object-fit: cover;">
+                <img src="suasana3.jpeg" alt="Suasana3" class="profile-img" width="260" height="180" style="width: 260px; max-width: 100%; height: 180px; object-fit: cover;">
+                <img src="suasana4.jpeg" alt="Suasana4" class="profile-img" width="260" height="180" style="width: 260px; max-width: 100%; height: 180px; object-fit: cover;">
+                <div>
+                    <p><strong>Joerang Kopi - Jalan Jurang ⭐ 5</strong> adalah kedai kopi lokal yang melayani pemesanan <em>Dine-out</em> dan <em>Delivery</em>.</p>
+                    <p>Menyajikan puluhan varian racikan kopi unggulan, minuman non-kopi segar, <em>Smoothies</em>, <em>Mocktail</em>, serta hidangan <em>Pastry</em> pilihan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="katalog" class="card">
+            <h2>Katalog Produk Pilihan</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="kopisusu2.jpeg" alt="Joerang Milk Coffee Cup" width="300" height="170" style="width: 100%; height: 170px; object-fit: cover;">
+                    <h3>Joerang Milk Coffee (Cup) <span class="badge badge-bestseller">Best Seller</span></h3>
+                    <p>Sajian kopi susu dingin segar dengan es batu dan aroma biji kopi pilihan khas Joerang Kopi.</p>
+                </div>
+                <div class="product-item">
+                    <img src="matchaschoco.jpeg" alt="Matcha Choco Joerang Kopi" width="300" height="170" style="width: 100%; height: 170px; object-fit: cover;">
+                    <h3>Matcha Choco <span class="badge badge-bestseller">Best Seller</span></h3>
+                    <p>Perpaduan rasa matcha otentik yang kaya rasa dan kelembutan cokelat pilihan.</p>
+                </div>
+                <div class="product-item">
+                    <img src="roti.jpeg" alt="Cranberry Pastry Joerang Kopi" width="300" height="170" style="width: 100%; height: 170px; object-fit: cover;">
+                    <h3>Cranberry Pastry <span class="badge badge-bestseller">Best Seller</span></h3>
+                    <p>Kombinasi keju lembut dan buah cranberry segar yang gurih dan menggugah selera.</p>
+                </div>
+            </div>
+        </section>
+
+       <section id="menu-section" class="card">
+    <h2>Daftar Menu Resmi Joerang Kopi</h2>
+    <p>Gunakan filter ini untuk menampilkan menu berdasarkan kategori pilihan anda:</p>
+    <div class="filter-container">
+        <select id="filterKategori">
+            <option value="semua">Tampilkan Semua Kategori</option>
+            <option value="Milk Coffee">Milk Coffee</option>
+            <option value="Espresso Base">Espresso Base</option>
+            <option value="Pour Over">Pour Over</option>
+            <option value="Matcha Series">Matcha Series</option>
+            <option value="Choco Series">Choco Series</option>
+            <option value="Non Coffee">Non Coffee</option>
+            <option value="Smoothies">Smoothies</option>
+            <option value="Moctail">Moctail</option>
+            <option value="Special Tea">Special Tea</option>
+            <option value="Pastry">Pastry</option>
+        </select>
+    </div>
+</section>
+
+<div class="table-responsive">
+    <table id="tabelmenu">
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>KATEGORI</th>
+                <th>NAMA MENU</th>
+                <th>HARGA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-kategori="Milk Coffee"><td>1</td><td>Milk Coffee</td><td>Joerang Milk Coffee <span class="badge badge-khas">Khas Joerang</span></td><td>Rp 26.400</td></tr>
+            <tr data-kategori="Milk Coffee"><td>2</td><td>Milk Coffee</td><td>Pandan Milk Coffee <span class="badge badge-bestseller">Best Seller</span></td><td>Rp 30.250</td></tr>
+            <tr data-kategori="Milk Coffee"><td>3</td><td>Milk Coffee</td><td>Biscoff Milk Coffee</td><td>Rp 30.250</td></tr>
+            <tr data-kategori="Milk Coffee"><td>4</td><td>Milk Coffee</td><td>Bon Bon Double</td><td>Rp 26.400</td></tr>
+            
+            <tr data-kategori="Espresso Base"><td>5</td><td>Espresso Base</td><td>Americano</td><td>Rp 23.000</td></tr>
+            <tr data-kategori="Espresso Base"><td>6</td><td>Espresso Base</td><td>Machiato</td><td>Rp 23.000</td></tr>
+            <tr data-kategori="Espresso Base"><td>7</td><td>Espresso Base</td><td>Cappuccino <span class="badge badge-bestseller">Best Seller</span></td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Espresso Base"><td>8</td><td>Espresso Base</td><td>Cafe Latte</td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Espresso Base"><td>9</td><td>Espresso Base</td><td>Caramel Machiato</td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Espresso Base"><td>10</td><td>Espresso Base</td><td>Moccacino</td><td>Rp 28.000</td></tr>
+            <tr data-kategori="Espresso Base"><td>11</td><td>Espresso Base</td><td>Magic</td><td>Rp 28.000</td></tr>
+            <tr data-kategori="Espresso Base"><td>12</td><td>Espresso Base</td><td>Butterscotch Latte</td><td>Rp 27.000</td></tr>
+            <tr data-kategori="Espresso Base"><td>13</td><td>Espresso Base</td><td>Hazelnut Latte</td><td>Rp 27.000</td></tr>
+            
+            <tr data-kategori="Pour Over"><td>14</td><td>Pour Over</td><td>Mancanegara</td><td>Rp 38.500</td></tr>
+            <tr data-kategori="Pour Over"><td>15</td><td>Pour Over</td><td>Local</td><td>Rp 30.000</td></tr>
+            <tr data-kategori="Pour Over"><td>16</td><td>Pour Over</td><td>To Brew</td><td>Rp 25.000</td></tr>
+            
+            <tr data-kategori="Matcha Series"><td>17</td><td>Matcha Series</td><td>Matcha Choco <span class="badge badge-bestseller">Best Seller</span></td><td>Rp 30.800</td></tr>
+            <tr data-kategori="Matcha Series"><td>18</td><td>Matcha Series</td><td>Matcha Coffee</td><td>Rp 30.800</td></tr>
+            <tr data-kategori="Matcha Series"><td>19</td><td>Matcha Series</td><td>Matcha Latte <span class="badge badge-bestseller">Best Seller</span></td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Matcha Series"><td>20</td><td>Matcha Series</td><td>Matcha Orange</td><td>Rp 30.800</td></tr>
+
+            <tr data-kategori="Choco Series"><td>21</td><td>Choco Series</td><td>Choco Original Sumatra <span class="badge badge-khas">Khas Joerang</span></td><td>Rp 27.500</td></tr>
+            <tr data-kategori="Choco Series"><td>22</td><td>Choco Series</td><td>Choco Hazelnut</td><td>Rp 27.000</td></tr>
+            <tr data-kategori="Choco Series"><td>23</td><td>Choco Series</td><td>Choco Butterscotch</td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Choco Series"><td>24</td><td>Choco Series</td><td>Choco Caramel</td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Choco Series"><td>25</td><td>Choco Series</td><td>Choco Salted Caramel</td><td>Rp 29.700</td></tr>
+
+            <tr data-kategori="Non Coffee"><td>26</td><td>Non Coffee</td><td>Palm Sugar Pandan Latte</td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Non Coffee"><td>27</td><td>Non Coffee</td><td>Chai Latte</td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Non Coffee"><td>28</td><td>Non Coffee</td><td>Red Velvet Latte</td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Non Coffee"><td>29</td><td>Non Coffee</td><td>Taro Latte</td><td>Rp 29.700</td></tr>
+
+            <tr data-kategori="Smoothies"><td>30</td><td>Smoothies</td><td>Tropical Smoothies</td><td>Rp 30.800</td></tr>
+            <tr data-kategori="Smoothies"><td>31</td><td>Smoothies</td><td>Strawberry Smoothies</td><td>Rp 30.800</td></tr>
+
+            <tr data-kategori="Moctail"><td>32</td><td>Moctail</td><td>Orange Milk Cream</td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Moctail"><td>33</td><td>Moctail</td><td>Blue Summer</td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Moctail"><td>34</td><td>Moctail</td><td>Black Orange</td><td>Rp 29.200</td></tr>
+            <tr data-kategori="Moctail"><td>35</td><td>Moctail</td><td>Black Peach</td><td>Rp 29.200</td></tr>
+            <tr data-kategori="Moctail"><td>36</td><td>Moctail</td><td>Watermelon Brizz</td><td>Rp 27.000</td></tr>
+
+            <tr data-kategori="Special Tea"><td>37</td><td>Special Tea</td><td>Camomile Tea</td><td>Rp 29.700</td></tr>
+            <tr data-kategori="Special Tea"><td>38</td><td>Special Tea</td><td>Early Grey Tea</td><td>Rp 29.700</td></tr>
+
+            <tr data-kategori="Pastry"><td>39</td><td>Pastry</td><td>Cranberry <span class="badge badge-bestseller">Best Seller</span></td><td>Rp 25.000</td></tr>
+            <tr data-kategori="Pastry"><td>40</td><td>Pastry</td><td>Classic Donuts <span class="badge badge-bestseller">Best Seller</span></td><td>Rp 15.000</td></tr>
+            <tr data-kategori="Pastry"><td>41</td><td>Pastry</td><td>Cheese Brownies</td><td>Rp 15.000</td></tr>
+            <tr data-kategori="Pastry"><td>42</td><td>Pastry</td><td>Can Be Folded With Cheese</td><td>Rp 15.000</td></tr>
+        </tbody>
+    </table>
+</div>
+<p class="free-note">Layanan Delivery : Untuk total transaksi di bawah Rp 25.000, berlaku order fee sebesar Rp 5.000.</p>
+    </main>
+
+    <section id="order-section" class="card container">
+        <h2>Pemesanan Online & Kanal Resmi</h2>
+        <p>Akses portal pesanan online, media sosial dan alamat resmi joerang kopi melalui tautan berikut:</p>
+        <ul class="social-links">
+            <li>
+                <a href="https://food.grab.com/id/en/restaurant/joerang-kopi-jalan-jurang-delivery/6-C7EKLUCXVBKVCE" target="_blank" rel="noopener noreferrer">
+                    🛵 GrabFood: Joerang Kopi - Jalan Jurang ⭐ 5 (20% OFF PROMO)
+                </a>
+            </li>
+            <li>
+                <a href="https://shopee.co.id/universal-link/now-food/shop/22192343?deep_and_deferred=1&shareChannel=copy_link" target="_blank" rel="noopener noreferrer">
+                    🛍️ ShopeeFood: JOERANG KOPI (20% OFF)
+                </a>
+            </li>
+            <li>
+                <a href="https://gofood.link/a/QhW8koG" target="_blank" rel="noopener noreferrer">
+                    🟢 Go-Food: JOERANG KOPI (PROMO 25%)
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/joerangkopiconcept" target="_blank" rel="noopener noreferrer">
+                    📸 Instagram Resmi (@joerangkopiconcept)
+                </a>
+            </li>
+             <li>
+                <a href="https://maps.app.goo.gl/rRbEKvX8JQABddT97" target="_blank" rel="noopener noreferrer">
+                    Alamat Joerang Kopi
+                </a>
+            </li>
+        </ul>
+
+        <form id="order-form" class="form-group">
+            <h3>Kalkulator Simulasi Pesanan</h3>
+            <label for="namaPemesan">Nama Pemesan:</label>
+            <input type="text" id="namaPemesan" placeholder="Masukkan Nama Anda" required>
+
+            <div class="item-inout-group">
+                <label for="pilihitem">Pilih Menu</label>
+                <select id="pilihitem">
+                    <option value="">Pilih Menu Joerang Kopi</option>
+                    <optgroup label="Milk Coffee">
+                        <option value="26400|Joerang Milk Coffee">Joerang Milk Coffee [Khas Joerang] - Rp 26.400</option>
+                        <option value="30250|Pandan Milk Coffee">Pandan Milk Coffee [Best Seller] - Rp 30.250</option>
+                        <option value="30250|Biscoff Milk Coffee">Biscoff Milk Coffee - Rp 30.250</option>
+                        <option value="26400|Bon Bon Double">Bon Bon Double - Rp 26.400</option>
+                    </optgroup>
+                    <optgroup label="Espresso Base">
+                        <option value="23000|Americano">Americano - Rp 23.000</option>
+                        <option value="23000|Machiato">Machiato - Rp 23.000</option>
+                        <option value="29700|Cappuccino">Cappuccino [Best Seller] - Rp 29.700</option>
+                        <option value="29700|Cafe Latte">Cafe Latte - Rp 29.700</option>
+                        <option value="29700|Caramel Machiato">Caramel Machiato - Rp 29.700</option>
+                        <option value="28000|Moccacino">Moccacino - Rp 28.000</option>
+                        <option value="28000|Magic">Magic - Rp 28.000</option>
+                        <option value="27000|Butterscotch Latte">Butterscotch Latte - Rp 27.000</option>
+                        <option value="27000|Hazelnut Latte">Hazelnut Latte - Rp 27.000</option>
+                    </optgroup>
+                    <optgroup label="Pour Over">
+                        <option value="38500|Mancanegara">Mancanegara - Rp 38.500</option>
+                        <option value="30000|Local">Local - Rp 30.000</option>
+                        <option value="25000|To Brew">To Brew - Rp 25.000</option>
+                    </optgroup>
+                    <optgroup label="Matcha Series">
+                        <option value="30800|Matcha Choco">Matcha Choco [Best Seller] - Rp 30.800</option>
+                        <option value="30800|Matcha Coffee">Matcha Coffee - Rp 30.800</option>
+                        <option value="29700|Matcha Latte">Matcha Latte [Best Seller] - Rp 29.700</option>
+                        <option value="30800|Matcha Orange">Matcha Orange - Rp 30.800</option>
+                    </optgroup>
+                    <optgroup label="Choco Series">
+                        <option value="27500|Choco Original Sumatra">Choco Original Sumatra [Khas Joerang] - Rp 27.500</option>
+                        <option value="27000|Choco Hazelnut">Choco Hazelnut - Rp 27.000</option>
+                        <option value="29700|Choco Butterscotch">Choco Butterscotch - Rp 29.700</option>
+                        <option value="29700|Choco Caramel">Choco Caramel - Rp 29.700</option>
+                        <option value="29700|Choco Salted Caramel">Choco Salted Caramel - Rp 29.700</option>
+                    </optgroup>
+                    <optgroup label="Non Coffee">
+                        <option value="29700|Palm Sugar Pandan Latte">Palm Sugar Pandan Latte - Rp 29.700</option>
+                        <option value="29700|Chai Latte">Chai Latte - Rp 29.700</option>
+                        <option value="29700|Red Velvet Latte">Red Velvet Latte - Rp 29.700</option>
+                        <option value="29700|Taro Latte">Taro Latte - Rp 29.700</option>
+                    </optgroup>
+                    <optgroup label="Smoothies">
+                        <option value="30800|Tropical Smoothies">Tropical Smoothies - Rp 30.800</option>
+                        <option value="30800|Strawberry Smoothies">Strawberry Smoothies - Rp 30.800</option>
+                    </optgroup>
+                    <optgroup label="Moctail">
+                        <option value="29700|Orange Milk Cream">Orange Milk Cream - Rp 29.700</option>
+                        <option value="29700|Blue Summer">Blue Summer - Rp 29.700</option>
+                        <option value="29200|Black Orange">Black Orange - Rp 29.200</option>
+                        <option value="29200|Black Peach">Black Peach - Rp 29.200</option>
+                        <option value="27000|Watermelon Brizz">Watermelon Brizz - Rp 27.000</option>
+                    </optgroup>
+                    <optgroup label="Special Tea">
+                        <option value="29700|Camomile Tea">Camomile Tea - Rp 29.700</option>
+                        <option value="29700|Early Grey Tea">Early Grey Tea - Rp 29.700</option>  
+                    </optgroup>
+                    <optgroup label="Pastry">
+                        <option value="25000|Cranberry">Cranberry [Best Seller] - Rp 25.000</option>
+                        <option value="15000|Classic Donuts">Classic Donuts [Best Seller] - Rp 15.000</option>
+                        <option value="15000|Cheese Brownies">Cheese Brownies - Rp 15.000</option>
+                        <option value="15000|Can Be Folded With Cheese">Can Be Folded With Cheese - Rp 15.000</option>
+                    </optgroup>
+                </select>
+
+                <label for="JumlahPorsi">Jumlah Porsi:</label>
+                <input type="number" id="JumlahPorsi" min="1" value="1">
+
+                <button type="button" id="btnTambahItem" class="btn-secondary">Tambah ke Pesanan</button>
+            </div>
+            
+            <div class="Keranjang-box">
+                <h4>Daftar Pesanan Sementara</h4>
+                <ul id="ListPesanan" class="list-pesanan">
+                    <li class="empty-list">Belum ada item yang ditambahkan</li>
+                </ul>
+            </div>
+
+            <button type="submit" class="btn-submit">Hitung total Pembayaran Akhir</button>
+        </form>
+        <div id="order-result" class="response-message"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Joerang Kopi - Jalan Jurang. Didevelop oleh <strong>Bunga Febriani Putri</strong> [NPM: <strong>251121005</strong>] - UTS Pemograman Berbasis Web.</p>
+    </footer>
+    <script src="UTS_PemogramanWeb.js"></script>
+</body>
+</html>
