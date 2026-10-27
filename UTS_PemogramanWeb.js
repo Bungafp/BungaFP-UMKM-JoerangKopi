@@ -57,7 +57,7 @@ if (btnTambah) {
 
         keranjang.push({ namaItem, harga, jumlah, subtotal });
 
-        // Reset input form
+
         document.getElementById('pilihitem').value = '';
         document.getElementById('JumlahPorsi').value = 1;
 
